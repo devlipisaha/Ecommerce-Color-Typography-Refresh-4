@@ -1,0 +1,1341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Xtremez — Premium Corporate Gifts UAE</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+
+<style>
+/* ══════════════════════════════════════════════════════════════════
+   XTREMEZ.STORE — EXACT WEBSITE WITH CLIENT COLORS & FONTS ONLY
+   
+   CLIENT COLORS (from Screenshot_59.jpg):
+   Primary:    #FF6B6B (coral red)
+   Secondary:  #34485E (dark navy)  
+   Accent:     #22EC71 (bright green)
+   Background: #E8E8E8 (light gray)
+   
+   FONTS:
+   Outfit   → headings, nav, buttons, prices
+   DM Sans  → body, descriptions
+   
+   LAYOUT: 100% UNCHANGED from original xtremez.store
+   ══════════════════════════════════════════════════════════════════ */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: #E8E8E8;
+  color: #34485E;
+  font-size: 14px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; display: block; }
+ul { list-style: none; }
+
+/* TOP ANNOUNCEMENT BAR */
+.top-bar {
+  background: #34485E;
+  color: rgba(255,255,255,0.85);
+  font-size: 12px;
+  text-align: center;
+  padding: 8px 20px;
+  font-family: 'DM Sans', sans-serif;
+}
+.top-bar strong { color: #22EC71; font-weight: 600; }
+
+/* UTILITY BAR */
+.util-bar {
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  padding: 5px 0;
+}
+.util-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  font-size: 12px;
+}
+.util-inner a {
+  color: #7A7A7A;
+  font-family: 'DM Sans', sans-serif;
+}
+.util-inner a:hover { color: #FF6B6B; }
+
+/* HEADER */
+.header {
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+}
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+.logo img { height: 45px; }
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.header-cart {
+  background: #FF6B6B;
+  color: #fff;
+  font-family: 'Outfit', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.header-cart:hover { background: #E85555; color: #fff; }
+.header-signin {
+  font-family: 'Outfit', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #34485E;
+  border: 1.5px solid #34485E;
+  padding: 9px 18px;
+  border-radius: 5px;
+}
+.header-signin:hover { background: #f5f5f5; }
+
+/* MAIN NAVIGATION */
+.main-nav {
+  background: #34485E;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-menu {
+  display: flex;
+  align-items: center;
+}
+.nav-menu > li { position: relative; }
+.nav-menu > li > a {
+  font-family: 'Outfit', sans-serif;
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.8);
+  padding: 14px 14px;
+  display: block;
+  transition: all 0.3s ease;
+}
+.nav-menu > li > a:hover { 
+  color: #22EC71;
+  background: rgba(255,255,255,0.08); 
+}
+.nav-menu > li:hover .dropdown { display: block; }
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 180px;
+  background: #2A3A4E;
+  border-radius: 0 0 6px 6px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  padding: 6px 0;
+}
+.dropdown a {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  color: rgba(255,255,255,0.85);
+  padding: 8px 16px;
+  display: block;
+}
+.dropdown a:hover { background: rgba(255,255,255,0.1); color: #fff; }
+
+.nav-contact {
+  font-family: 'Outfit', sans-serif;
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: rgba(255,255,255,0.8);
+  padding: 14px 14px;
+  transition: all 0.3s ease;
+}
+.nav-contact:hover { 
+  color: #22EC71;
+}
+
+/* CATEGORY STRIP */
+.cat-strip {
+  background: #fff;
+  border-bottom: 2px solid #e0e0e0;
+}
+.cat-strip-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.cat-strip-inner a {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  color: #555;
+  padding: 10px 14px;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+}
+.cat-strip-inner a:hover,
+.cat-strip-inner a.active {
+  color: #FF6B6B;
+  border-bottom-color: #FF6B6B;
+  font-weight: 500;
+}
+
+/* HERO BANNER */
+.hero {
+  position: relative;
+  background: #34485E;
+  overflow: hidden;
+  min-height: 450px;
+}
+.hero-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+  min-height: 450px;
+}
+.hero-content {
+  padding: 60px 0;
+  z-index: 2;
+}
+.hero-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(24px, 3.5vw, 40px);
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin-bottom: 24px;
+}
+.hero-btn {
+  font-family: 'Outfit', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  background: #FF6B6B;
+  padding: 13px 30px;
+  border-radius: 6px;
+  display: inline-block;
+  box-shadow: 0 4px 14px rgba(255,107,107,0.4);
+  transition: all 0.3s ease;
+}
+.hero-btn:hover { 
+  background: #E85555; 
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(255,107,107,0.5);
+}
+.hero-image-side {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+.hero-img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+
+/* SECTION HEADINGS */
+.section-head {
+  text-align: center;
+  padding: 50px 20px 30px;
+}
+.section-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #34485E;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+.section-sub {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  color: #7A7A7A;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* CATEGORY GRID */
+.cat-grid-section {
+  background: #fff;
+  padding: 0 0 50px;
+}
+.cat-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+.cat-card {
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+.cat-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  padding: 2px;
+  background: linear-gradient(135deg, transparent 0%, rgba(255,107,107,0.1) 50%, transparent 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.cat-card:hover {
+  border-color: rgba(255,107,107,0.3);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(255,107,107,0.18), 0 4px 12px rgba(0,0,0,0.08);
+}
+.cat-card:hover::before {
+  opacity: 1;
+}
+.cat-img {
+  width: 100%;
+  height: 160px;
+  object-fit: contain;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  padding: 16px;
+  transition: transform 0.4s ease;
+}
+.cat-card:hover .cat-img {
+  transform: scale(1.05);
+}
+.cat-body {
+  padding: 16px 18px 18px;
+  background: #fff;
+}
+.cat-name {
+  font-family: 'Outfit', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #34485E;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+.cat-link {
+  font-family: 'Outfit', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #FF6B6B;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.3s ease;
+}
+.cat-link::after {
+  content: '→';
+  transition: transform 0.3s ease;
+}
+.cat-card:hover .cat-link {
+  color: #E85555;
+  gap: 10px;
+}
+.cat-card:hover .cat-link::after {
+  transform: translateX(4px);
+}
+
+/* PRODUCT GRID */
+.products-section {
+  background: #E8E8E8;
+  padding: 50px 0;
+}
+.products-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 20px;
+}
+.product-card {
+  background: #fff;
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  position: relative;
+}
+.product-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 14px;
+  padding: 2px;
+  background: linear-gradient(135deg, transparent 0%, rgba(52,72,94,0.08) 50%, transparent 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.product-card:hover {
+  border-color: rgba(255,107,107,0.25);
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(52,72,94,0.12), 0 6px 16px rgba(255,107,107,0.08);
+}
+.product-card:hover::before {
+  opacity: 1;
+}
+.product-img-wrap {
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.product-img-wrap::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 30%, rgba(255,107,107,0.03) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.product-card:hover .product-img-wrap::after {
+  opacity: 1;
+}
+.product-img-wrap img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  padding: 20px;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  z-index: 1;
+}
+.product-card:hover .product-img-wrap img {
+  transform: scale(1.08);
+}
+.product-body {
+  padding: 18px 20px 20px;
+  background: #fff;
+}
+.product-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #34485E;
+  line-height: 1.4;
+  margin-bottom: 14px;
+  min-height: 42px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.product-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 14px;
+}
+.product-price {
+  font-family: 'Outfit', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #34485E;
+  letter-spacing: -0.01em;
+}
+.add-to-cart-btn {
+  font-family: 'Outfit', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: #fff;
+  background: linear-gradient(135deg, #FF6B6B 0%, #FF5555 100%);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 12px rgba(255,107,107,0.3);
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+}
+.add-to-cart-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.add-to-cart-btn:hover::before {
+  opacity: 1;
+}
+.add-to-cart-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255,107,107,0.4), 0 2px 8px rgba(0,0,0,0.08);
+  background: linear-gradient(135deg, #E85555 0%, #E04444 100%);
+}
+.add-to-cart-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 12px rgba(255,107,107,0.3);
+}
+.add-to-cart-btn svg {
+  width: 15px;
+  height: 15px;
+  fill: currentColor;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.add-to-cart-btn:hover svg {
+  transform: scale(1.15);
+}
+
+/* ECO SECTION */
+.eco-section {
+  background: #fff;
+  padding: 50px 0;
+}
+.eco-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+.eco-text { flex: 1; }
+.eco-tag {
+  font-family: 'Outfit', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #22EC71;
+  margin-bottom: 12px;
+}
+.eco-heading {
+  font-family: 'Outfit', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #34485E;
+  margin-bottom: 20px;
+}
+.eco-btn {
+  font-family: 'Outfit', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  background: #22EC71;
+  padding: 11px 24px;
+  border-radius: 5px;
+  display: inline-block;
+}
+.eco-btn:hover { background: #1DD863; color: #fff; }
+.eco-img { flex: 1; }
+.eco-img img { width: 100%; border-radius: 8px; }
+
+/* BRANDS */
+.brands-section {
+  background: #E8E8E8;
+  padding: 40px 0;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+.brands-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.brands-label {
+  font-family: 'Outfit', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #999;
+  text-align: center;
+  margin-bottom: 25px;
+}
+.brands-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.brands-row img {
+  height: 38px;
+  opacity: 0.6;
+  filter: grayscale(1);
+}
+.brands-row img:hover { opacity: 1; filter: grayscale(0); }
+
+/* COLLECTION BANNERS */
+.collection-section {
+  background: #fff;
+  padding: 50px 0;
+}
+.collection-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.collection-card {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  min-height: 320px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+.collection-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 14px;
+  padding: 2px;
+  background: linear-gradient(135deg, rgba(52,72,94,0.3) 0%, transparent 50%, rgba(52,72,94,0.3) 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.collection-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 48px rgba(52,72,94,0.2), 0 8px 20px rgba(0,0,0,0.1);
+}
+.collection-card:hover::before {
+  opacity: 1;
+}
+.collection-card img { 
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.collection-card:hover img {
+  transform: scale(1.08);
+}
+.collection-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(52,72,94,0.85) 0%, rgba(52,72,94,0.4) 50%, transparent 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 28px;
+  transition: background 0.4s ease;
+}
+.collection-card:hover .collection-overlay {
+  background: linear-gradient(to top, rgba(52,72,94,0.9) 0%, rgba(52,72,94,0.5) 50%, transparent 100%);
+}
+.collection-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 8px;
+  letter-spacing: -0.01em;
+  transform: translateY(0);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.collection-card:hover .collection-title {
+  transform: translateY(-4px);
+}
+.collection-sub {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  color: rgba(255,255,255,0.8);
+  margin-bottom: 18px;
+  transform: translateY(0);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.collection-card:hover .collection-sub {
+  transform: translateY(-4px);
+}
+.collection-btn {
+  font-family: 'Outfit', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: #34485E;
+  background: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  display: inline-block;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 12px rgba(255,255,255,0.3);
+  align-self: flex-start;
+  position: relative;
+  overflow: hidden;
+}
+.collection-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(34,236,113,0.2) 0%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.collection-btn:hover::before {
+  opacity: 1;
+}
+.collection-btn:hover { 
+  background: #22EC71; 
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(34,236,113,0.4);
+}
+
+/* TRUST STRIP */
+.trust-strip {
+  background: #fff;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 30px 0;
+}
+.trust-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  text-align: center;
+}
+.trust-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #34485E;
+  margin-bottom: 4px;
+}
+.trust-sub {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  color: #7A7A7A;
+}
+
+/* NEWSLETTER */
+.newsletter {
+  background: #E8E8E8;
+  padding: 50px 0;
+  text-align: center;
+}
+.newsletter-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #34485E;
+  margin-bottom: 6px;
+}
+.newsletter-sub {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  color: #7A7A7A;
+  margin-bottom: 24px;
+}
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  max-width: 420px;
+  margin: 0 auto;
+}
+.newsletter-input {
+  flex: 1;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  border: 1.5px solid #ccc;
+  border-radius: 5px;
+  padding: 10px 14px;
+  background: #fff;
+}
+.newsletter-input:focus { border-color: #FF6B6B; outline: none; }
+.newsletter-btn {
+  font-family: 'Outfit', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  background: #FF6B6B;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 22px;
+  cursor: pointer;
+}
+.newsletter-btn:hover { background: #E85555; }
+
+/* FOOTER */
+.footer {
+  background: #34485E;
+  padding: 50px 0 0;
+}
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1.4fr;
+  gap: 40px;
+}
+.footer-logo { height: 38px; margin-bottom: 14px; }
+.footer-desc {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.6;
+  max-width: 220px;
+}
+.footer-heading {
+  font-family: 'Outfit', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 14px;
+}
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.footer-links a {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  color: rgba(255,255,255,0.5);
+}
+.footer-links a:hover { color: #22EC71; }
+.footer-contact {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+.footer-contact a { color: rgba(255,255,255,0.7); }
+.footer-contact a:hover { color: #22EC71; }
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  margin-top: 40px;
+  padding: 18px 20px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.footer-copy {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  color: rgba(255,255,255,0.35);
+}
+.footer-copy a { color: rgba(255,255,255,0.4); }
+.footer-copy a:hover { color: #22EC71; }
+.footer-payments {
+  display: flex;
+  gap: 10px;
+}
+.footer-payments img { height: 24px; opacity: 0.7; }
+
+/* WHATSAPP */
+.whatsapp {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: #25D366;
+  color: #fff;
+  font-family: 'Outfit', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 12px 20px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 6px 20px rgba(37,211,102,0.5);
+  z-index: 999;
+  transition: all 0.3s ease;
+}
+.whatsapp:hover { 
+  box-shadow: 0 10px 28px rgba(37,211,102,0.6); 
+  color: #fff;
+  transform: translateY(-2px);
+}
+.whatsapp svg { 
+  fill: #fff;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+/* MOCKUP BADGE */
+.mockup-badge {
+  background: #1a1a2e;
+  border-bottom: 3px solid #FF6B6B;
+  padding: 8px 20px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}
+.mockup-text {
+  font-family: 'Outfit', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  color: #FF6B6B;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.pulse {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #22EC71;
+  animation: pulse 1.5s infinite;
+}
+@keyframes pulse { 0%,100%{opacity:1}50%{opacity:0.3} }
+.tags {
+  display: inline-flex;
+  gap: 6px;
+  margin-left: 10px;
+}
+.tag {
+  font-size: 10px;
+  background: rgba(255,107,107,0.15);
+  border: 1px solid rgba(255,107,107,0.3);
+  padding: 2px 8px;
+  border-radius: 10px;
+  color: #FF6B6B;
+}
+
+@media (max-width: 768px) {
+  .hero-inner { grid-template-columns: 1fr; min-height: auto; padding: 40px 20px; }
+  .hero-content { padding: 20px 0; }
+  .hero-image-side { order: -1; }
+  .cat-grid { grid-template-columns: repeat(2, 1fr); }
+  .products-grid { grid-template-columns: 1fr; }
+  .eco-inner { flex-direction: column; }
+  .collection-inner { grid-template-columns: 1fr; }
+  .trust-inner { grid-template-columns: repeat(2, 1fr); }
+  .footer-inner { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- MOCKUP BADGE -->
+<div class="mockup-badge">
+  <span class="mockup-text">
+    <span class="pulse"></span>
+    MOCKUP: Client's Website with New Colors & Fonts Applied
+    <span class="tags">
+      <span class="tag">#FF6B6B Coral</span>
+      <span class="tag">#34485E Navy</span>
+      <span class="tag">#22EC71 Green</span>
+      <span class="tag">Outfit + DM Sans</span>
+    </span>
+  </span>
+</div>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  Ready Stocks in <strong>UAE, Saudi Arabia, Qatar, South Africa and India</strong> | Aspirational Brands & Genuine Sustainable Products
+</div>
+
+<!-- UTIL BAR -->
+<div class="util-bar">
+  <div class="util-inner">
+    <a href="#">Wishlist</a>
+    <span>|</span>
+    <a href="#">My Account</a>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="header-inner">
+    <a href="#" class="logo">
+      <img src="https://xtremez.store/storage/settings/4ib9VmIqiecCECujvS2YjSazAISCOiNwb9xeNyTI.png" alt="Xtremez" onerror="this.style.display='none'"/>
+    </a>
+    <div class="header-right">
+      <a href="#" class="header-signin">SIGN IN</a>
+      <a href="#" class="header-cart">
+        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>
+        0 MY CART
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- MAIN NAV -->
+<nav class="main-nav">
+  <div class="nav-inner">
+    <ul class="nav-menu">
+      <li>
+        <a href="#">SUSTAINABLE</a>
+        <div class="dropdown">
+          <a href="#">Technology</a>
+          <a href="#">Apparel</a>
+          <a href="#">Drinkware</a>
+          <a href="#">Bags & Travel</a>
+          <a href="#">Home & Lifestyle</a>
+          <a href="#">Awards & Trophies</a>
+          <a href="#">Gift Sets</a>
+        </div>
+      </li>
+      <li>
+        <a href="#">APPAREL</a>
+        <div class="dropdown">
+          <a href="#">Polo Shirts</a>
+          <a href="#">Hoodies & Sweatshirts</a>
+          <a href="#">Roundneck T-shirts</a>
+          <a href="#">Towels</a>
+          <a href="#">Caps & Headwear</a>
+          <a href="#">Formal Shirts</a>
+          <a href="#">Jackets</a>
+        </div>
+      </li>
+      <li><a href="#">TECH</a></li>
+      <li><a href="#">DRINKWARE</a></li>
+      <li><a href="#">BAGS</a></li>
+      <li><a href="#">OFFICE</a></li>
+      <li><a href="#">OTHERS</a></li>
+    </ul>
+    <a href="#" class="nav-contact">Contact Us</a>
+  </div>
+</nav>
+
+<!-- CATEGORY STRIP -->
+<div class="cat-strip">
+  <div class="cat-strip-inner">
+    <a href="#" class="active">Home</a>
+    <a href="#">Drinkware</a>
+    <a href="#">Apparel & Clothing</a>
+    <a href="#">Bags & Travel</a>
+    <a href="#">Awards & Trophies</a>
+    <a href="#">Gift Sets</a>
+    <a href="#">Other</a>
+    <a href="#" style="margin-left:auto;">Sign In</a>
+    <a href="#">Contact Us</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <h1 class="hero-title">AVEIRO - CHANGE ZERO Sustainable Gratitude Gift Set</h1>
+      <a href="#" class="hero-btn">Buy Now</a>
+    </div>
+    <div class="hero-image-side">
+      <img class="hero-img" src="https://xtremez.store/storage/banners/aLA9x6WKfpoXb1lK2vTdrzeU1Az0fx1p7V0j4gn2.png" alt="Hero" onerror="this.style.minHeight='350px';this.style.width='100%';this.style.background='#2A3A4E';this.style.borderRadius='12px'"/>
+    </div>
+  </div>
+</section>
+
+<!-- BROWSE BY CATEGORY -->
+<div class="section-head">
+  <h2 class="section-title">Browse by Category</h2>
+  <p class="section-sub">Explore our store the easy way: shop by category and enjoy a seamless, organized shopping experience.</p>
+</div>
+
+<section class="cat-grid-section">
+  <div class="cat-grid">
+    <a href="#" class="cat-card">
+      <img class="cat-img" src="https://xtremez.store/storage/categories/agDpYs8IBR4PXVYvEn1ihfEQB7nyDEZHeDVkQXyw.png" alt="Drinkware" onerror="this.style.background='#f5f5f5'"/>
+      <div class="cat-body">
+        <div class="cat-name">Drinkware</div>
+        <div class="cat-link">Shop Now</div>
+      </div>
+    </a>
+    <a href="#" class="cat-card">
+      <img class="cat-img" src="https://xtremez.store/storage/categories/AKXHY9CUkvZ3wCxGXeS9RcGZvrBXuS7hREjWFBvF.png" alt="Apparel" onerror="this.style.background='#f5f5f5'"/>
+      <div class="cat-body">
+        <div class="cat-name">Apparel & Clothing</div>
+        <div class="cat-link">Shop Now</div>
+      </div>
+    </a>
+    <a href="#" class="cat-card">
+      <img class="cat-img" src="https://xtremez.store/storage/categories/WEnALB4ZljjwfroQhLUi6QLeT0ibCo8YA1TK1Dt3.png" alt="Bags" onerror="this.style.background='#f5f5f5'"/>
+      <div class="cat-body">
+        <div class="cat-name">Bags & Travel</div>
+        <div class="cat-link">Shop Now</div>
+      </div>
+    </a>
+    <a href="#" class="cat-card">
+      <img class="cat-img" src="https://xtremez.store/storage/categories/6Jsl53f99fbSbbZK47vf1AJdpStmNaA98Icnz2Mg.png" alt="Office" onerror="this.style.background='#f5f5f5'"/>
+      <div class="cat-body">
+        <div class="cat-name">Office & Writing</div>
+        <div class="cat-link">Shop Now</div>
+      </div>
+    </a>
+    <a href="#" class="cat-card">
+      <img class="cat-img" src="https://xtremez.store/storage/categories/99LLQVQDmR76xMBcVo6FmVPEC5RHV1GeyJxEqNpx.png" alt="Gifts" onerror="this.style.background='#f5f5f5'"/>
+      <div class="cat-body">
+        <div class="cat-name">Gift Sets</div>
+        <div class="cat-link">Shop Now</div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- NEW ARRIVALS -->
+<section class="products-section">
+  <div class="products-inner">
+    <h2 class="section-title" style="text-align:left;margin-bottom:10px;">New Arrivals</h2>
+    <div class="products-grid">
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://www.jasani.ae/web/image/product.product/11992/image_1024?unique=e7899bb" alt="Product" onerror="this.style.display='none'"/>
+        </div>
+        <div class="product-body">
+          <div class="product-title">SARGAN - Vacuum Flask with Temperature Lid and Notebook Gift Set - Black</div>
+          <div class="product-footer">
+            <div class="product-price">ê 43.18</div>
+            <button class="add-to-cart-btn">
+              <svg viewBox="0 0 24 24"><path d="M9 2a1 1 0 011-1h4a1 1 0 011 1v1h4a1 1 0 011 1v1a1 1 0 01-1 1H5a1 1 0 01-1-1V4a1 1 0 011-1h4V2zm-2 5h10v13a1 1 0 01-1 1H8a1 1 0 01-1-1V7z"/></svg>
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://www.jasani.ae/web/image/product.product/22127/image_1024?unique=867c1d5" alt="Product" onerror="this.style.display='none'"/>
+        </div>
+        <div class="product-body">
+          <div class="product-title">AVEIRO - CHANGE ZERO Sustainable 5pc Gratitude Gift Set - Navy Blue</div>
+          <div class="product-footer">
+            <div class="product-price">ê 128.52</div>
+            <button class="add-to-cart-btn">
+              <svg viewBox="0 0 24 24"><path d="M9 2a1 1 0 011-1h4a1 1 0 011 1v1h4a1 1 0 011 1v1a1 1 0 01-1 1H5a1 1 0 01-1-1V4a1 1 0 011-1h4V2zm-2 5h10v13a1 1 0 01-1 1H8a1 1 0 01-1-1V7z"/></svg>
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://www.jasani.ae/web/image/product.product/22127/image_1024?unique=867c1d5" alt="Product" onerror="this.style.display='none'"/>
+        </div>
+        <div class="product-body">
+          <div class="product-title">AVEIRO - CHANGE ZERO Sustainable 5pc Gratitude Gift Set - Navy Blue</div>
+          <div class="product-footer">
+            <div class="product-price">ê 128.52</div>
+            <button class="add-to-cart-btn">
+              <svg viewBox="0 0 24 24"><path d="M9 2a1 1 0 011-1h4a1 1 0 011 1v1h4a1 1 0 011 1v1a1 1 0 01-1 1H5a1 1 0 01-1-1V4a1 1 0 011-1h4V2zm-2 5h10v13a1 1 0 01-1 1H8a1 1 0 01-1-1V7z"/></svg>
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ECO SECTION -->
+<section class="eco-section">
+  <div class="eco-inner">
+    <div class="eco-text">
+      <div class="eco-tag">Eco Collection</div>
+      <h2 class="eco-heading">Sustainable Products</h2>
+      <a href="#" class="eco-btn">Shop Now</a>
+    </div>
+    <div class="eco-img">
+      <img src="https://xtremez.store/assets/images/sustainable-products.png" alt="Eco" onerror="this.style.display='none'"/>
+    </div>
+  </div>
+</section>
+
+<!-- BRANDS -->
+<section class="brands-section">
+  <div class="brands-inner">
+    <div class="brands-label">Our Brands</div>
+    <div class="brands-row">
+      <img src="https://xtremez.store/storage/brands/L1flhTORuJPJT1SKPkKDmdsAdiyVuImrBzseSe68.png" alt="Brand" onerror="this.style.display='none'"/>
+      <img src="https://xtremez.store/storage/brands/L1flhTORuJPJT1SKPkKDmdsAdiyVuImrBzseSe68.png" alt="Brand" onerror="this.style.display='none'"/>
+    </div>
+  </div>
+</section>
+
+<!-- COLLECTION -->
+<section class="collection-section">
+  <div class="collection-inner">
+    <div class="collection-card">
+      <img src="https://xtremez.store/assets/images/video-image.jpg" alt="Video" onerror="this.style.background='#34485E';this.style.minHeight='280px'"/>
+      <div class="collection-overlay">
+        <div class="collection-title">A wide collection of creatives</div>
+      </div>
+    </div>
+    <div class="collection-card">
+      <img src="https://xtremez.store/assets/images/corporate-gifts-giftana.png" alt="Brochure" onerror="this.style.background='#34485E';this.style.minHeight='280px'"/>
+      <div class="collection-overlay">
+        <div class="collection-title">Our 2026 Gifts Collection</div>
+        <div class="collection-sub">A wide collection of creatives</div>
+        <a href="#" class="collection-btn">View Brochure</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="trust-strip">
+  <div class="trust-inner">
+    <div>
+      <div class="trust-title">Easy Free Delivery</div>
+      <div class="trust-sub">Orders Above 100 AED</div>
+    </div>
+    <div>
+      <div class="trust-title">Secure Payments</div>
+      <div class="trust-sub">Trusted payment options.</div>
+    </div>
+    <div>
+      <div class="trust-title">Easy Returns</div>
+      <div class="trust-sub">Fast and easy returns</div>
+    </div>
+    <div>
+      <div class="trust-title">Customer Support</div>
+      <div class="trust-sub">Expert Assistance</div>
+    </div>
+  </div>
+</div>
+
+<!-- NEWSLETTER -->
+<section class="newsletter">
+  <h2 class="newsletter-title">Get in touch with us</h2>
+  <p class="newsletter-sub">Our Newsletter</p>
+  <div class="newsletter-form">
+    <input type="email" class="newsletter-input" placeholder="Your email address"/>
+    <button class="newsletter-btn">Subscribe</button>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <img class="footer-logo" src="https://xtremez.store/storage/settings/lRdScHtG4luBZz04wzAWdHmEixeU4vBpJ6E4TK5g.png" alt="Logo" onerror="this.style.display='none'"/>
+      <p class="footer-desc">Premium corporate gifts with fast delivery and trusted support.</p>
+    </div>
+    <div>
+      <div class="footer-heading">Shop</div>
+      <div class="footer-links">
+        <a href="#">All Products</a>
+        <a href="#">Featured</a>
+        <a href="#">Clearance</a>
+        <a href="#">Cart</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-heading">Company</div>
+      <div class="footer-links">
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">FAQ</a>
+        <a href="#">My Account</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-heading">Policies</div>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Shipping Policy</a>
+        <a href="#">Returns & Refunds</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-heading">Contact Us</div>
+      <p class="footer-contact">Questions & suggestions?<br/><a href="/cdn-cgi/l/email-protection#94ece0e6f1f9f1eebaf5f0e7d4f3f9f5fdf8baf7fbf9"><span class="__cf_email__" data-cfemail="3e464a4c5b535b44105f5a4d7e59535f5752105d5153">[email&#160;protected]</span></a></p>
+      <p class="footer-contact">Need support? Call us:<br/><a href="tel:+971522621345">+971 52 262 1345</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">
+      COPYRIGHT 2026 - XTREMEZ | ALL RIGHTS RESERVED · 
+      <a href="#">Sitemap</a> · <a href="#">Careers</a>
+    </div>
+    <div class="footer-payments">
+      <img src="https://img.icons8.com/color/48/visa.png" alt="Visa"/>
+      <img src="https://img.icons8.com/color/48/mastercard-logo.png" alt="MC"/>
+      <img src="https://img.icons8.com/color/48/amex.png" alt="Amex"/>
+      <img src="https://img.icons8.com/color/48/paypal.png" alt="PayPal"/>
+    </div>
+  </div>
+</footer>
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/971522621345" class="whatsapp" target="_blank">
+  <svg viewBox="0 0 24 24" fill="#ffffff" width="20" height="20">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+  </svg>
+  Chat with us
+</a>
